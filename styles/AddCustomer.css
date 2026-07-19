@@ -1,0 +1,477 @@
+/* ===============================
+   SANFLORA ADD CUSTOMER PAGE
+   PART 1
+==================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#F5F7FB;
+    font-family:"Segoe UI",sans-serif;
+    overflow-x:hidden;
+}
+
+/* Main Content */
+
+.container-fluid{
+    margin-left:250px;
+    width:calc(100% - 250px);
+    padding:35px;
+    min-height:100vh;
+}
+
+/* Card */
+
+.card{
+    background:#fff;
+    border:none !important;
+    border-radius:25px !important;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    animation:fadeUp .5s ease;
+}
+
+/* Header */
+
+.card-header{
+    background:linear-gradient(135deg,#5B3DF5,#7B5CFF)!important;
+    color:#fff!important;
+    padding:25px 35px;
+    border:none!important;
+}
+
+.card-header h3{
+    margin:0;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+/* Body */
+
+.card-body{
+    padding:35px;
+}
+
+/* Labels */
+
+.form-label{
+
+    color:#2C2158;
+    font-weight:600;
+    margin-bottom:8px;
+    font-size:15px;
+
+}
+
+/* Inputs */
+
+.form-control,
+.form-select{
+
+    height:55px;
+
+    border-radius:14px;
+
+    border:2px solid #E4E7F2;
+
+    background:#FAFBFE;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    padding:12px 16px;
+
+}
+
+.form-control:hover,
+.form-select:hover{
+
+    border-color:#B4A5FF;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#6C4CF1;
+
+    box-shadow:0 0 0 4px rgba(108,76,241,.15);
+
+    background:#fff;
+
+}
+
+/* Placeholder */
+
+.form-control::placeholder{
+
+    color:#aaa;
+
+}
+
+/* Select */
+
+.form-select{
+
+    cursor:pointer;
+
+}
+
+/* Row */
+
+.row{
+
+    row-gap:5px;
+
+}
+
+/* Buttons */
+
+.btn{
+
+    border-radius:12px !important;
+
+    padding:12px 28px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    border:none;
+
+}
+
+/* Save */
+
+.btn-success{
+
+    background:linear-gradient(135deg,#6C4CF1,#8A63FF)!important;
+
+}
+
+.btn-success:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(108,76,241,.35);
+
+}
+
+/* Cancel */
+
+.btn-secondary{
+
+    background:#E9ECF7!important;
+
+    color:#2C2158!important;
+
+}
+
+.btn-secondary:hover{
+
+    background:#D8DDF0!important;
+
+    transform:translateY(-3px);
+
+}
+
+/* Inputs Animation */
+
+.form-control,
+.form-select,
+.btn{
+
+    transition:all .3s ease;
+
+}
+
+/* Card Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Space Between Buttons */
+
+.btn + .btn{
+
+    margin-left:12px;
+
+}
+
+/* ===============================
+   SANFLORA ADD CUSTOMER PAGE
+   PART 2 (Responsive + Polish)
+==================================*/
+
+/* Input Number */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    opacity:1;
+}
+
+/* Date Input */
+
+input[type="date"]{
+    cursor:pointer;
+}
+
+/* Better Focus */
+
+.form-control:focus,
+.form-select:focus{
+    transform:translateY(-2px);
+}
+
+/* Card Hover */
+
+.card:hover{
+    box-shadow:0 22px 45px rgba(0,0,0,.10);
+}
+
+/* Button Icons */
+
+.btn i{
+    margin-right:8px;
+}
+
+/* Smooth Transition */
+
+.card,
+.form-control,
+.form-select,
+.btn{
+    transition:all .3s ease;
+}
+
+/* ===================================
+            LARGE LAPTOP
+=================================== */
+
+@media (max-width:1400px){
+
+.container-fluid{
+    padding:30px;
+}
+
+.card-body{
+    padding:30px;
+}
+
+}
+
+/* ===================================
+              LAPTOP
+=================================== */
+
+@media (max-width:1200px){
+
+.container-fluid{
+    padding:25px;
+}
+
+.card-header h3{
+    font-size:28px;
+}
+
+}
+
+/* ===================================
+              TABLET
+=================================== */
+
+@media (max-width:992px){
+
+.container-fluid{
+    margin-left:0 !important;
+    width:100% !important;
+    padding:20px;
+}
+
+.card{
+    border-radius:20px !important;
+}
+
+.card-body{
+    padding:25px;
+}
+
+.card-header{
+    padding:22px;
+}
+
+.card-header h3{
+    font-size:25px;
+    text-align:center;
+}
+
+.btn{
+    width:100%;
+    margin-top:10px;
+}
+
+.btn + .btn{
+    margin-left:0;
+}
+
+}
+
+/* ===================================
+              MOBILE
+=================================== */
+
+@media (max-width:768px){
+
+.container-fluid{
+    padding:15px;
+}
+
+.card{
+    border-radius:18px !important;
+}
+
+.card-header{
+    padding:18px;
+}
+
+.card-header h3{
+    font-size:22px;
+}
+
+.card-body{
+    padding:20px;
+}
+
+.form-label{
+    font-size:14px;
+}
+
+.form-control,
+.form-select{
+    height:50px;
+    font-size:14px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    font-size:15px;
+}
+
+.btn + .btn{
+    margin-top:12px;
+}
+
+}
+
+/* ===================================
+            SMALL MOBILE
+=================================== */
+
+@media (max-width:480px){
+
+.container-fluid{
+    padding:10px;
+}
+
+.card{
+    border-radius:15px !important;
+}
+
+.card-header{
+    padding:16px;
+}
+
+.card-header h3{
+    font-size:20px;
+}
+
+.card-body{
+    padding:16px;
+}
+
+.form-control,
+.form-select{
+    height:48px;
+    padding:10px 12px;
+    font-size:14px;
+}
+
+.form-label{
+    font-size:13px;
+}
+
+.btn{
+    font-size:14px;
+    padding:11px;
+}
+
+}
+
+/* ===================================
+          EXTRA POLISH
+=================================== */
+
+.form-control::placeholder{
+    color:#B0B4C3;
+}
+
+.form-select option{
+    color:#333;
+}
+
+.btn-success:active,
+.btn-secondary:active{
+    transform:scale(.98);
+}
+
+.card-header{
+    position:relative;
+}
+
+.card-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:4px;
+
+    background:rgba(255,255,255,.25);
+
+}
+
+.card-body{
+    background:#FFFFFF;
+}
+
+.row>.col-md-6{
+    margin-bottom:10px;
+}
